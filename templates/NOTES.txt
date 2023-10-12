@@ -1,0 +1,2 @@
+{{ .Release.Name }} version:{{ .Values.appVersion | default .Chart.AppVersion }} has been deployed in {{ .Release.Namespace}} namespace.
+Path: http://<domain>{{ if .Values.path }}{{ .Values.path }}{{ else}}/{{ end }}

@@ -1,0 +1,5 @@
+repository: vyushmanov
+limits:
+  memory: "128Mi"
+  cpu: "500m"
+servicePort: 8080

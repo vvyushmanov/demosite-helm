@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Chart.Name }}
+spec:
+  selector:
+    matchLabels:
+      app: {{ .Chart.Name }}
+  template:
+    metadata:
+      labels:
+        app: {{ .Chart.Name }}
+    spec:
+      containers:
+      - name: {{ .Chart.Name }}
+        image: {{ .Values.repository }}/{{ .Chart.Name }}:{{ .Values.appVersion | default .Chart.AppVersion }}
+        imagePullPolicy: Always
+        resources:
+          limits:
+            memory: {{ .Values.limits.memory }}
+            cpu: {{ .Values.limits.cpu }}
+        ports:
+        - containerPort: 80
+
+
