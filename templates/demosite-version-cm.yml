@@ -1,0 +1,26 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ .Chart.Name }}-version-page
+  labels:
+    app: {{ .Chart.Name }}
+data:
+  index.html: |
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>Demosite v.{{ .Values.appVersion | default .Chart.AppVersion }} (c) Vadim Iushmanov</title>
+        <style>
+            body {
+                text-align: right;
+                padding-right: 100px;
+            }
+            p {
+                color: gray; 
+            }
+        </style>
+    </head>
+    <body>
+        <p>Demosite v.{{ .Values.appVersion | default .Chart.AppVersion }} (c) Vadim Iushmanov</p>
+    </body>
+    </html>

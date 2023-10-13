@@ -21,5 +21,12 @@ spec:
             cpu: {{ .Values.limits.cpu }}
         ports:
         - containerPort: 80
+        volumeMounts:
+          - name:  version
+            mountPath:  /usr/share/nginx/html/version
+      volumes:
+        - name:  version
+          configMap:
+            name: {{ .Chart.Name }}-version-page
 
 
