@@ -1,0 +1,24 @@
+apiVersion: v1
+entries:
+  demosite:
+  - apiVersion: v2
+    appVersion: latest
+    created: "2023-10-14T17:02:41.963165376+04:00"
+    description: A Helm chart for the Netology Diploma demo-website
+    digest: c624c121721fbe7a2888009741968eafc250b06eda767ab87e9c86cb733005f0
+    name: demosite
+    type: application
+    urls:
+    - https://vvyushmanov.github.io/demosite-helm/demosite-0.3.1.tgz
+    version: 0.3.1
+  - apiVersion: v2
+    appVersion: latest
+    created: "2023-10-14T17:02:41.962927776+04:00"
+    description: A Helm chart for the Netology Diploma demo-website
+    digest: ac3060c25687f9e07b0a9a6d4c42c615ab6abe9d758176de5d86195cf54ec4ca
+    name: demosite
+    type: application
+    urls:
+    - https://vvyushmanov.github.io/demosite-helm/demosite-0.3.0.tgz
+    version: 0.3.0
+generated: "2023-10-14T17:02:41.962390476+04:00"
